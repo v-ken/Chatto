@@ -115,6 +115,7 @@ open class BaseMessageCollectionViewCellDefaultStyle: BaseMessageCollectionViewC
         layoutConstants: BaseMessageCollectionViewCellLayoutConstants = Class.createDefaultLayoutConstants(),
         dateTextStyle: DateTextStyle = Class.createDefaultDateTextStyle(),
         avatarStyle: AvatarStyle = AvatarStyle(),
+        avatarCornerRadius: CGFloat? = nil,
         selectionIndicatorStyle: SelectionIndicatorStyle = Class.createDefaultSelectionIndicatorStyle()) {
             self.colors = colors
             self.bubbleBorderImages = bubbleBorderImages
@@ -122,6 +123,7 @@ open class BaseMessageCollectionViewCellDefaultStyle: BaseMessageCollectionViewC
             self.layoutConstants = layoutConstants
             self.dateTextStyle = dateTextStyle
             self.avatarStyle = avatarStyle
+            self.avatarCornerRadius = avatarCornerRadius
             self.selectionIndicatorStyle = selectionIndicatorStyle
 
             self.dateStringAttributes = [
@@ -138,6 +140,7 @@ open class BaseMessageCollectionViewCellDefaultStyle: BaseMessageCollectionViewC
     public lazy var borderOutgoingTail: UIImage? = self.bubbleBorderImages?.borderOutgoingTail()
     public lazy var borderOutgoingNoTail: UIImage? = self.bubbleBorderImages?.borderOutgoingNoTail()
 
+    public var avatarCornerRadius: CGFloat?
     public lazy var failedIcon: UIImage = self.failedIconImages.normal()
     public lazy var failedIconHighlighted: UIImage = self.failedIconImages.highlighted()
 
